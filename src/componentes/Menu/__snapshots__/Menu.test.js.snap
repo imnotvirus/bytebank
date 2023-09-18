@@ -3,28 +3,28 @@
 exports[`Teste do componente Menu deve renderizar uma lista de links com a classe link 1`] = `
 Array [
   <a
-    class="link"
+    class="link false"
     href="/"
   >
-    Inicial
+    Início
   </a>,
   <a
-    class="link"
-    href="/"
+    class="link false"
+    href="/cartoes"
   >
-    Transferências
+    Cartões
   </a>,
   <a
-    class="link"
-    href="/"
+    class="link false"
+    href="/servicos"
+  >
+    Serviços
+  </a>,
+  <a
+    class="link false"
+    href="/investimentos"
   >
     Investimentos
-  </a>,
-  <a
-    class="link"
-    href="/"
-  >
-    Outros serviços
   </a>,
 ]
 `;
