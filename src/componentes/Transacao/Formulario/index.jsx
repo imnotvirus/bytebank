@@ -21,7 +21,7 @@ export default function Formulario({ realizarTransacao }) {
       data: dataTransacao,
       mes: mesTransacao[0].toUpperCase() + mesTransacao.substring(1),
     });
-    setValor({ ...valor, valor: '' });
+    setValor({ transacao: '', valor: '' });
   }
 
   return (
@@ -32,8 +32,10 @@ export default function Formulario({ realizarTransacao }) {
         onChange={handleChange}
         name="transacao"
         data-testid="select-opcoes"
+        required
+        value={valor.transacao}
       >
-        <option defaultValue="Selecione um tipo de transação">
+        <option defaultValue="Selecione um tipo de transação" value={''}>
           Selecione um tipo de transação
         </option>
         <option value="Depósito">Depósito</option>
@@ -50,6 +52,7 @@ export default function Formulario({ realizarTransacao }) {
         name="valor"
         id="valor"
         placeholder="Digite um valor"
+        required
       />
       <button className={estilos.botao} type="submit">
         Realizar transação
