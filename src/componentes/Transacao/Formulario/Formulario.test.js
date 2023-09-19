@@ -29,13 +29,13 @@ describe('Formulario', () => {
   it('Deve chamar a função onSubmit quando o botão é clicado', () => {
     const funcaoOnSubmit = jest.fn();
     const { getByRole } = render(
-      <Formulario realizarTransacao={funcaoOnSubmit} />,
+      <Formulario realizarTransacao={funcaoOnSubmit} />
     );
     const botao = getByRole('button');
     userEvent.click(botao);
     expect(funcaoOnSubmit).toHaveBeenCalledTimes(1);
   });
-  
+
   it('Deve ser possivel selecionar um tipo de transação', () => {
     const { getByRole } = render(<Formulario />);
     const select = getByRole('combobox');

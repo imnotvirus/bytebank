@@ -9,7 +9,7 @@ describe('Transacao', () => {
       valor: 100,
     };
     const { getByTestId, rerender } = render(
-      <Transacao estilos={estilos} transacao={transacao} />,
+      <Transacao estilos={estilos} transacao={transacao} />
     );
 
     const tipoTransacao = getByTestId('tipoTransacao');
@@ -35,7 +35,7 @@ describe('Transacao', () => {
       valor: 50,
     };
     const { getByTestId } = render(
-      <Transacao estilos={estilos} transacao={transacao} />,
+      <Transacao estilos={estilos} transacao={transacao} />
     );
     const valorTransacao = getByTestId('valorTransacao');
     expect(valorTransacao.textContent).toBe('- R$ 50');

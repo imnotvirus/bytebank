@@ -7,7 +7,7 @@ export default function Servicos() {
   return (
     <section className="container">
       <div className={estilos.detalhe__superior} />
-      <div className={estilos.wrapper}>
+      <div className={estilos.wrapper} data-testid='lista-servicos'>
         {icones.map((icone) => {
           return <Icone key={icone.servico} estilos={estilos} icone={icone} />;
         })}

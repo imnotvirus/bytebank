@@ -6,7 +6,7 @@ const renderComponent = (props) =>
   render(
     <BrowserRouter>
       <Menu {...props} />
-    </BrowserRouter>,
+    </BrowserRouter>
   );
 
 describe('Teste do componente Menu', () => {
